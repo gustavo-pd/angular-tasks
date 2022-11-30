@@ -2,4 +2,101 @@
   <header class="header">
     <h2>Adicione um <br>pensamento novo:</h2>
   </header>
+  <form>
+    <label for="pensamento">Pensamento</label>
+    <input
+      type="textarea"
+      class="input"
+      id="pensamento"
+      name="pensamento"
+      placeholder="Digite seu pensamento"
+    >
+    <label for="autoria">Autor(a) ou Fonte</label>
+    <input
+      type="text"
+      class="input"
+      id="autoria"
+      name="autoria"
+      placeholder="Insira o nome do(a) autor(a) ou fonte."
+    >
+    <label for="modelo">Selecione o modelo do card:</label>
+    <div class="container-radio">
+      <div class="radio-modelo">
+        <label for="modelo1">
+          <input
+            type="radio"
+            id="modelo1"
+            value="modelo1"
+            name="modelo-card"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          Modelo 1
+        </label>
+        <label>Prévia:</label>
+        <div class="modelo modelo1 ff-roboto-mono">
+          <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
+          <p class="conteudo">
+            Lorem ipsum dolor sit <br>
+            amet, consectetur <br>
+            adipiscing elit, sed do <br>
+            eiusmod tempor incididunt.</p>
+          <p class="conteudo"><b>Autora da Silva Sauro</b></p>
+        </div>
+      </div>
+      <div class="radio-modelo">
+        <label for="modelo2">
+          <input
+            type="radio"
+            id="modelo2"
+            value="modelo2"
+            name="modelo-card"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          Modelo 2
+        </label>
+        <label>Prévia:</label>
+        <div class="modelo modelo2 ff-roboto-mono">
+          <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis escuras">
+          <p class="conteudo">
+            Lorem ipsum dolor sit <br>
+            amet, consectetur <br>
+            adipiscing elit, sed do <br>
+            eiusmod tempor incididunt.</p>
+          <p class="conteudo"><b>Autora da Silva Sauro</b></p>
+        </div>
+      </div>
+      <div class="radio-modelo">
+        <label for="modelo3">
+          <input
+            type="radio"
+            id="modelo3"
+            value="modelo3"
+            name="modelo-card"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          Modelo 3
+        </label>
+        <label>Prévia:</label>
+        <div class="modelo modelo3 ff-roboto-mono">
+          <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
+          <p class="conteudo">
+            Lorem ipsum dolor sit <br>
+            amet, consectetur <br>
+            adipiscing elit, sed do <br>
+            eiusmod tempor incididunt.</p>
+          <p class="conteudo"><b>Autora da Silva Sauro</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="acoes">
+      <button class="botao">Salvar</button>
+      <button class="botao">Cancelar</button>
+    </div>
+  </form>
 </section>
