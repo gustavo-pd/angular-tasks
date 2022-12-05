@@ -30,9 +30,15 @@ export class ExcluirPensamentoComponent implements OnInit {
   }
 
   excluirPensamento() {
-    this.service.excluir(this.pensamento.id).subscribe(() => {
-      this.router.navigate(['/pensamentos/listar'])
-    })
+    if(this.pensamento.id) {
+      this.service.excluir(this.pensamento.id).subscribe(() => {
+        this.router.navigate(['/pensamento/listar']);
+      })
+    }
+  }
+
+  cancelar() {
+    this.router.navigate(['/pensamento/listar']);
   }
 
 }
