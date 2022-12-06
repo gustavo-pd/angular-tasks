@@ -1,19 +1,19 @@
 import { PensamentoService } from './../pensamento.service';
+import { Pensamento } from './../pensamento';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pensamento } from '../pensamento';
 
 @Component({
-  selector: 'app-excluir-pensamento',
-  templateUrl: './excluir-pensamento.component.html',
-  styleUrls: ['./excluir-pensamento.component.css']
+  selector: 'app-editar-pensamento',
+  templateUrl: './editar-pensamento.component.html',
+  styleUrls: ['./editar-pensamento.component.css']
 })
-export class ExcluirPensamentoComponent implements OnInit {
+export class EditarPensamentoComponent implements OnInit {
   pensamento: Pensamento = {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: 'modelo1'
   }
 
   constructor(
@@ -29,15 +29,15 @@ export class ExcluirPensamentoComponent implements OnInit {
     })
   }
 
-  excluirPensamento() {
-    if(this.pensamento.id) {
-      this.service.excluir(this.pensamento.id).subscribe(() => {
+  editarPensamento() {
+    if(this.pensamento) {
+      this.service.editar(this.pensamento).subscribe(() => {
         this.router.navigate(['/pensamento/listar']);
       })
     }
   }
 
-  cancelar() {
+  cancelarPensamento() {
     this.router.navigate(['/pensamento/listar']);
   }
 }
